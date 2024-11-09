@@ -6,22 +6,45 @@
 <?import javafx.scene.canvas.Canvas?>
 
 <BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myndefullorganum.PrimaryController">
-    <!-- Toolbar at the top with Color Picker and Brush Size Slider -->
+   
    <children>
       <Label text="Primary View" />
    </children>
+
+   <!-- Top of the page content -->
    <top>
+      <!-- Toolbar at the top with Color Picker and Brush Size Slider -->
       <HBox spacing="10" style="-fx-padding: 10;">
          <ColorPicker fx:id="colorPicker" />
          <Slider fx:id="brushSizeSlider" min="1" max="50" value="5" showTickMarks="true" showTickLabels="true" majorTickUnit="10" />
          <Button fx:id="primaryButton" text="2" onAction="#switchToSecondary"/>
       </HBox>
    </top>
-    
-    <!-- Canvas for drawing -->
+   
+   <!-- Middle of the page content -->
    <center>
-      <Canvas fx:id="canvas" width="800" height="600" />
+      <TabPane>
+         <tabs>
+            <Tab text="Canvas">
+               <content>
+                  <!-- Canvas for drawing -->
+                  <Canvas fx:id="canvas" width="800" height="600" />
+               </content>
+            </Tab>
+            <Tab text="Test">
+               <content>
+                  <Label text="Content of Tab 2" />
+               </content>
+            </Tab>
+         </tabs>
+         <tabClosingPolicy>SELECTED_TAB</tabClosingPolicy>
+      </TabPane> 
    </center>
+
+   <!-- Bottom of the page content -->
+   <bottom>
+   </bottom>
+
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
