@@ -15,27 +15,14 @@
    <top>
       <!-- Toolbar at the top with Color Picker and Brush Size Slider -->
       <HBox spacing="10" style="-fx-padding: 10;">
-         <ColorPicker fx:id="colorPicker" />
-         <Slider fx:id="brushSizeSlider" min="1" max="50" value="5" showTickMarks="true" showTickLabels="true" majorTickUnit="10" />
-         <Button fx:id="primaryButton" text="2" onAction="#switchToSecondary"/>
+         <Button fx:id="primaryButton" text="WB" onAction="#createWhiteboardTab"/>
       </HBox>
    </top>
    
    <!-- Middle of the page content -->
    <center>
-      <TabPane>
+      <TabPane fx:id="mainTabPane">
          <tabs>
-            <Tab text="Canvas">
-               <content>
-                  <!-- Canvas for drawing -->
-                  <Canvas fx:id="canvas" width="800" height="600" />
-               </content>
-            </Tab>
-            <Tab text="Test">
-               <content>
-                  <Label text="Content of Tab 2" />
-               </content>
-            </Tab>
          </tabs>
          <tabClosingPolicy>SELECTED_TAB</tabClosingPolicy>
       </TabPane> 
