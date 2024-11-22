@@ -1,6 +1,9 @@
-package com.myndefullorganum;
+package com.myndefullorganum.Controllers;
 
 import java.io.IOException;
+
+import com.myndefullorganum.App;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Tab;
@@ -16,6 +19,24 @@ public class PrimaryController {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("whiteboard.fxml"));
         Tab tempTab = new Tab();
         tempTab.setText("Whiteboard");
+        tempTab.setContent(fxmlLoader.load());
+        makeNewTab(tempTab);
+    }
+
+    @FXML
+    private void createOrganizerTab() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("organizer.fxml"));
+        Tab tempTab = new Tab();
+        tempTab.setText("Organizer");
+        tempTab.setContent(fxmlLoader.load());
+        makeNewTab(tempTab);
+    }
+
+    @FXML
+    private void createPostitboardTab() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("postitboard.fxml"));
+        Tab tempTab = new Tab();
+        tempTab.setText("Postitboard");
         tempTab.setContent(fxmlLoader.load());
         makeNewTab(tempTab);
     }

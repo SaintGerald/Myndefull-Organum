@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:id="postitBoard" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myndefullorganum.Controllers.PostitboardController">
+
+    <top>
+        <!-- Toolbar at the top with Color Picker and Brush Size Slider -->
+        <HBox spacing="10" style="-fx-padding: 10;">
+            <Button fx:id="addPostit" text="Add Post-it" onAction="#addPostit"/>
+        </HBox>
+    </top>
+
+    <center>
+
+    </center>
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</BorderPane>

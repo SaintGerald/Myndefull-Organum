@@ -5,7 +5,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.canvas.Canvas?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myndefullorganum.PrimaryController">
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myndefullorganum.Controllers.PrimaryController">
    
    <children>
       <Label text="Primary View" />
@@ -15,7 +15,9 @@
    <top>
       <!-- Toolbar at the top with Color Picker and Brush Size Slider -->
       <HBox spacing="10" style="-fx-padding: 10;">
-         <Button fx:id="primaryButton" text="WB" onAction="#createWhiteboardTab"/>
+         <Button fx:id="whiteboardButton" text="WB" onAction="#createWhiteboardTab"/>
+         <Button fx:id="organizerButton" text="OB" onAction="#createOrganizerTab"/>
+         <Button fx:id="postitboardButton" text="PB" onAction="#createPostitboardTab"/>
       </HBox>
    </top>
    

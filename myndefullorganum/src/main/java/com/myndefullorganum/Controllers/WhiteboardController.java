@@ -1,4 +1,4 @@
-package com.myndefullorganum;
+package com.myndefullorganum.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
@@ -7,7 +7,6 @@ import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.StrokeLineCap;
 
 public class WhiteboardController {

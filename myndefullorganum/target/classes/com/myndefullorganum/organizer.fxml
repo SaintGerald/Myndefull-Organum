@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myndefullorganum.Controllers.OrganizerController">
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10;">
+            <TextField fx:id="taskTitleField" promptText="Task Title" />
+            <ComboBox fx:id="categoryComboBox" promptText="Category" />
+            <Button text="Add Task" onAction="#addTask" />
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <Label text="Tasks:" />
+            <ListView fx:id="taskListView" />
+        </VBox>
+    </center>
+    <right>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <Label text="Task Details:" />
+            <TextArea fx:id="taskDetailsArea" editable="false" />
+            <Button text="Delete Task" onAction="#deleteTask" />
+        </VBox>
+    </right>
+</BorderPane>
